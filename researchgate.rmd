@@ -1,0 +1,51 @@
+---
+title: "Research Square - Question"
+author: "Srilakshmi Bodduluru"
+date: "8/17/2020"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Please write a program that simulates and outputs the result of 100 rolls of a fair 20-sided die.What is your estimate for the average of those roles (including the standard deviation of that estimated average)? What is your estimate for the expected value of a single roll of a 20-sided die (including the standard deviation of that expected value)? Briefly explain why the two estimates are or are not the same. 
+
+
+Simulating 100 rolls is similar to generating 100 samples
+We will consider the range of values equal to the number of sides of the die
+
+```{r}
+# set seed to get same results every time 
+set.seed(123)
+numbers = 1:20
+random.numbers <- sample(x = numbers, size = 100, replace = TRUE)
+
+# average value
+mean_value <- mean(random.numbers)
+mean_value
+
+# standard deviation
+std <- sd(random.numbers)
+std
+
+```
+
+as can be seen mean or average of the experiment is :11.03
+
+Standard deviation is : 5.2502
+
+Expected variable of a random variable can be given by sum of probabilities multiplied by its respective event (where p(x)*x is conceptually frequency of x divided by total frequency).
+The concept of expectation value or expected value may be understood from the following example. 
+Let X represent the outcome of a roll of 20-sided die. 
+The possible values for X are 1, 2, 3, 4, 5, .....20, each having the probability of occurrence of 1/20. 
+The expectation value (or expected value) of X is then given by
+
+(X)expected=1(1/20)+2(1/20)+...+20(1/20) = 10.5
+
+
+We say that the average value is 11.03, with the distance of 0.53 from the expectation value of 10.5. 
+If we roll the die N times, where N is very large, then the average will converge to the expected value, 
+i.e.,(X)average=(X)expected. 
+This is evidently because, when N is very large each possible value of X (i.e. 1 to 20) will occur with equal probability of 1/20, turning the average to the expectation value.
+
