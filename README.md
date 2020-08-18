@@ -1,1 +1,2 @@
 # Research-Square---Question
+Please write a program that simulates and outputs the result of 100 rolls of a fair 20-sided die. What is your estimate for the average of those roles (including the standard deviation of that estimated average)? What is your estimate for the expected value of a single roll of a 20-sided die (including the standard deviation of that expected value)? Briefly explain why the two estimates are or are not the same. 
